@@ -1,0 +1,14 @@
+{
+	"appName": {
+		"message": "BravoRedirect"
+	},
+	"appBetaName": {
+		"message": "BravoRedirect"
+	},
+	"appDescription": {
+		"message": "Acesse um protocolo do Bravo apenas pelo número sem precisar copiar e colar na URL toda hora!"
+	},
+	"contextmenu": {
+		"message": "Acessar protocolo no Bravo!"
+	}
+}
