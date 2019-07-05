@@ -29,7 +29,7 @@ function click(info) {
         }, function () {
           chrome.windows.update(tab.windowId, {
             focused: true
-          }, function () {});
+          }, function () { });
         });
       });
     } else {
@@ -59,3 +59,40 @@ chrome.storage.sync.get(function () {
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   click(info, tab);
 });
+
+function show() {
+
+  (function loop() {
+    var time = /(..)(:..)/.exec(new Date());
+    var hora = time[0];
+    var delay;
+
+    if (hora == '17:20' || hora == '17:25') {
+      var not = new Notification('Já são ' + hora + 'h, não esqueça do time-tracking!', {
+        icon: './icons/logo-32.png',
+        body: 'Clique aqui para abrir o Bravo!'
+      });
+      not.onclick= aaa;
+    } else {
+      time = /(..)(:..)/.exec(new Date());
+      delay = 60000 - (time % 60000);
+      setTimeout(loop, delay);
+    }
+  })();
+}
+
+
+function aaa() {
+  chrome.tabs.create({'url':"https://controle.suporte99.com/#/timeTracking"});
+}
+
+if (!localStorage.isInitialized) {
+  localStorage.isActivated = true;
+  localStorage.isInitialized = true;
+}
+
+if (window.Notification) {
+  if (JSON.parse(localStorage.isActivated)) {
+    show();
+  }
+}
