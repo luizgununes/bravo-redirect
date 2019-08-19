@@ -14,7 +14,8 @@
     "32": "icons/logo-32.png",
     "64": "icons/logo-64.png",
     "128": "icons/logo-128.png",
-    "256": "icons/logo-256.png"
+    "256": "icons/logo-256.png",
+    "512": "icons/logo-512.png"
   },
   "background": {
     "scripts": ["background.js"],
