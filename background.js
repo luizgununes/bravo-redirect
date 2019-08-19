@@ -72,18 +72,17 @@ function show() {
         icon: './icons/logo-32.png',
         body: 'Clique aqui para abrir o Bravo!'
       });
-      not.onclick= aaa;
+      not.onclick = timeTracking;
     } else {
       time = /(..)(:..)/.exec(new Date());
-      delay = 60000 - (time % 60000);
+      delay = 10000 - (time % 60000);
       setTimeout(loop, delay);
     }
   })();
 }
 
-
-function aaa() {
-  chrome.tabs.create({'url':"https://controle.suporte99.com/#/timeTracking"});
+function timeTracking() {
+  chrome.tabs.create({ 'url': "https://controle.suporte99.com/#/timeTracking" });
 }
 
 if (!localStorage.isInitialized) {
