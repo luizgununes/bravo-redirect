@@ -1,6 +1,8 @@
 # BravoRedirect
 Acesse um protocolo do Bravo apenas pelo número sem precisar copiar e colar na URL toda hora!
 
+Link para download: https://chrome.google.com/webstore/detail/bravoredirect/mlojbgkgfalkkdpdpnnaoccpnognpoep?hl=pt-BR
+
 Updates:
 > 1.0.1 - Adicionado o logo definitivo para a extensão.
 
